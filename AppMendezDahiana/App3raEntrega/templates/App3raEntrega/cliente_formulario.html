@@ -1,0 +1,21 @@
+{%extends 'App3raEntrega/inicio.html' %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase">Agregar Cliente</h1>
+{% endblock titulo %}
+
+{% block boton %}
+
+{% endblock boton %}
+
+
+{% block contenido %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{mi_formulario.as_table}}
+    </table>
+    <button type="submit"> Agregar </button>
+</form>
+{% endblock contenido %}
+

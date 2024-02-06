@@ -1,0 +1,19 @@
+{% extends 'App3raEntrega/inicio.html' %}
+
+{% block titulo %}
+    <h1 class="mb-5">BUSCAR TRATAMIENTO</h1>
+{% endblock titulo %}
+    
+
+{% block contenido %}
+<form action="{% url 'buscar_tratamientos' %}" method="get">
+    {% csrf_token %}
+
+    <p>Tratamiento a buscar: <input type="text" name="buscar" id="buscar"></p>
+    <input type="submit" value="Buscar">
+</form>
+{% endblock contenido %}
+
+{% block boton1 %}
+        
+{% endblock boton1 %}

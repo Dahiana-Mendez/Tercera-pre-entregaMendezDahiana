@@ -1,0 +1,39 @@
+{%extends 'App3raEntrega/inicio.html' %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase">TRATAMIENTOS</h1>
+{% endblock titulo %}
+
+{% block boton %}
+<a class="btn btn-primary" href="#projects">VER TRATAMIENTOS</a>
+{% endblock boton %}
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre del Tratamiento</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Duración del Tratamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for t in tratamientos  %}
+        <tr>
+            <td>{{ t.id }}</td>
+            <td>{{ t.nombre }}</td>
+            <td>{{ t.descripcion }}</td>
+            <td>{{ t.precio }}</td>
+            <td>{{ t.duracion }}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+
+{% block boton1 %}
+<a class="btn btn-primary" href="{% url 'tratamiento_formulario' %}">AGREGAR TRATAMIENTO</a>       
+{% endblock boton1 %}
